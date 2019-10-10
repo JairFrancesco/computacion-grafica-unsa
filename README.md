@@ -24,12 +24,21 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 # 3.Traslación, Rotación y Escala de un poligono
 
+
+##Traslación
+
+![grafica_traslacion](imagenes/opengl-traslacion.gif)
+
+##Rotación
+
+![grafica_traslacion](imagenes/opengl-rotacion.gif)
+
+##Escala
+
+![grafica_traslacion](imagenes/opengl-escala.gif)
+
+##Movimiento de poligono
+
 ![grafica_traslacion](imagenes/opengl-poligono.gif)
-
-# 5.Pintar
-
-![bd_disponibles](Imagenes/bd_disponibles.PNG)
-
-
 
 
