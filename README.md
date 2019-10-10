@@ -1,4 +1,4 @@
-# Primera laboratorio de Computación Grafica - CS 2019
+# Primer laboratorio de Computación Grafica - CS 2019
 
 Alumno:
 - Jair Francesco Huaman Canqui
