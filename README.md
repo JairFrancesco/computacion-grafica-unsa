@@ -16,11 +16,11 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 # 1.Graficar Recta 2D usando punto medio
 
-![grafica_linea](imagenes/grafica_linea.PNG)
+![grafica_linea](imagenes/grafica_linea.png)
 
 # 2.Graficar Circunferencia o poligono 
 
-![grafica_circunferencia](imagenes/grafica_circulo.PNG)
+![grafica_circunferencia](imagenes/grafica_circulo.png)
 
 # 3.Traslación, Rotación y Escala de un poligono
 
