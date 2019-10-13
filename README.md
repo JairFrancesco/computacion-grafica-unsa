@@ -2,6 +2,7 @@
 
 Alumno:
 - Jair Francesco Huaman Canqui
+- CUI: 20152567
 
 Profesor: 
 - Dr. Juan Carlos Gutierrez Caceres
