@@ -46,3 +46,9 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 ![grafica_traslacion](imagenes/opengl-poligono.gif)
 
 
+
+# 4. Rellenado de poligonos
+
+![rellenado_poligonos](imagenes/grafica_rellenadopoligono.png)
+
+
