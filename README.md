@@ -20,7 +20,7 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 # 1.b.Graficar Recta 3D usando algoritmo incremental
 
-![grafica_linea3d](imagenes/grafica_linea3d.png)
+![grafica_linea3d](imagenes/grafico_linea3d.png)
 
 # 2.Graficar Circunferencia o poligono 
 
