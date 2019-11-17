@@ -24,11 +24,7 @@ Luego ejecute con
 
 | Código  | Ejecución |
 | ------------- | ------------- |
-|  ``` case GLUT_KEY_F2:
-            glutPassiveMotionFunc(Examinar);
-            MiCamara->camMovimiento = CAM_EXAMINAR;
-            printf("%s\n","F2, CAM_EXAMINAR" );
-            break; ``` | ![grafica_linea](imagenes/mov_movmouse.gif) |
+| ![grafica_linea](imagenes/mov_movmouse_codigo.png) | ![grafica_linea](imagenes/mov_movmouse.gif) |
 
 
 
