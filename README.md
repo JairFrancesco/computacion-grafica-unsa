@@ -26,6 +26,29 @@ Luego ejecute con
 | ------------- | ------------- |
 | ![grafica_linea](imagenes/mov_movmouse_codigo.png) | ![grafica_linea](imagenes/mov_movmouse.gif) |
 
+### Código
+
+```
+static void SpecialKey(int key, int x, int y) {
+	case GLUT_KEY_F2:
+	    glutPassiveMotionFunc(Examinar);
+	    MiCamara->camMovimiento = CAM_EXAMINAR;
+	    printf("%s\n","F2, CAM_EXAMINAR" );
+	    break;
+
+/* La función Examinar(int x, int y) moverá la cámara en el 
+modo Examinar según los movimientos del ratón: */
+void Examinar(int x, int y) {
+    float rot_x, rot_y;
+    rot_y = (float) (old_y - y);
+    rot_x = (float) (x - old_x);
+    MiCamara->Rotar_Latitud( rot_y * DEGREE_TO_RAD);
+    MiCamara->Rotar_Longitud(rot_x * DEGREE_TO_RAD);
+    old_y = y;
+    old_x = x;
+    glutPostRedisplay();
+}
+```
 
 
 ## Movimiento pulsando un click
@@ -81,6 +104,34 @@ case GLUT_KEY_F7:
 ![grafica_circunferencia](imagenes/cambio_perspectiva.gif)
 
 # 3. Mover el objeto en la proyeccion (con las teclas)
+
+```
+case GLUT_KEY_PAGE_UP:
+    if (MiCamara->camAperture < 175 * DEGREE_TO_RAD)
+        MiCamara->camAperture = MiCamara->camAperture + 2.5f * DEGREE_TO_RAD;
+    break;
+
+case GLUT_KEY_PAGE_DOWN:
+    if (MiCamara->camAperture > 5 * DEGREE_TO_RAD)
+        MiCamara->camAperture = MiCamara->camAperture - 2.5f * DEGREE_TO_RAD;
+    break;
+
+case GLUT_KEY_UP:
+    MiCamara->Rotar_Latitud( 2.5f * DEGREE_TO_RAD);
+    break;
+
+case GLUT_KEY_DOWN:
+    MiCamara->Rotar_Latitud( -2.5f * DEGREE_TO_RAD);
+    break;
+
+case GLUT_KEY_LEFT:
+    MiCamara->Rotar_Longitud( -2.5f * DEGREE_TO_RAD);
+    break;
+
+case GLUT_KEY_RIGHT:
+    MiCamara->Rotar_Longitud(2.5f * DEGREE_TO_RAD);
+    break;
+```
 
 ![grafica_traslacion](imagenes/mov_teclas.gif)
 
