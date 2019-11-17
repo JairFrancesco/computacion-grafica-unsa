@@ -125,6 +125,16 @@ void Tripode(int x, int y){
     glutPostRedisplay();
 }
 
+void Pan(int x, int y){
+    float avance_x, avance_y;
+    avance_x = (float)(old_x - x) / 10;
+    avance_y = (float)(y - old_y) / 10;
+    MiCamara->PanCamera(avance_x, avance_y);
+    old_y = y;
+    old_x = x;
+    glutPostRedisplay();
+}
+
 void Zoom(int x, int y) {
 
     float zoom;
@@ -213,6 +223,11 @@ void mouse(int button, int state, int x, int y) {
 
                 case CAM_TRIPODE:
                     if (state == GLUT_DOWN) glutMotionFunc(Tripode);
+                    if (state == GLUT_UP) glutMotionFunc(NULL);
+                    break;
+
+                case CAM_PAN:
+                    if (state == GLUT_DOWN) glutMotionFunc(Pan);
                     if (state == GLUT_UP) glutMotionFunc(NULL);
                     break;
             }
@@ -350,6 +365,15 @@ static void SpecialKey(int key, int x, int y) {
             MiCamara->SetDependentParametersCamera();
             printf("%s\n","F5, CAM TRIPODE" );
             break;
+
+        case GLUT_KEY_F6:
+            MiCamara->camAtY = 0;
+            MiCamara->camViewY = 0;
+            MiCamara->camMovimiento = CAM_PAN;
+            MiCamara->SetDependentParametersCamera();
+            printf("%s\n","F5, CAM TRIPODE" );
+            break;
+
         default:
             printf("key %d %c X %d Y %d\n", key, key, x, y);
     }

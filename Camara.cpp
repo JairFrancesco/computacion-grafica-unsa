@@ -220,5 +220,22 @@ void Camara::PitchCamera(float angle )
     SetDependentParametersCamera( );
 }
 
+
+void Camara::PanCamera(float stepX, float stepY )
+{
+    float vaX, vaY, vaZ;
+    vaX= stepX * camIX + stepY * camJX;
+    vaY= stepX * camIY + stepY * camJY;
+    vaZ= stepX * camIZ + stepY * camJZ;
+    // Set V & A
+    camViewX = camViewX + vaX;
+    camViewY += vaY;
+    camViewZ += vaZ;
+    camAtX+=vaX;
+    camAtY+=vaY;
+    camAtZ+=vaZ;
+    SetDependentParametersCamera();
+}
+
 Camara::~Camara() {
 }

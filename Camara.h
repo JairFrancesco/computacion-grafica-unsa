@@ -77,6 +77,8 @@ public:
     void Rotar_Longitud(float inc);
     void PitchCamera(float angle ); // local axis Z camera
 
+    void PanCamera(float stepX, float stepY );
+
 };
 
 #endif /* CAMARA_H */
