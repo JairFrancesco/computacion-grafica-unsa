@@ -17,7 +17,11 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 # 1. Mover la camara con el Mouse
 
-![grafica_linea](imagenes/grafica_linea.png)
+## Movimiento pulsando un click
+![grafica_linea](imagenes/mov_clickmouse.gif)
+
+## Movimiento usando el rastro del mouse
+![grafica_linea](imagenes/mov_movmouse.gif)
 
 # 2. Dotar al programa de una tecla que permita cambiar el modo de proyección entre ORTOGONAL y PERSPECTIVA
 
@@ -25,18 +29,7 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 # 3. Mover el objeto en la proyeccion (con las teclas)
 
-
-## Movimiento Izquierda-derecha
-
-![grafica_traslacion](imagenes/opengl-traslacion.gif)
-
-## Movimiento Arriba-abajo
-
-![grafica_traslacion](imagenes/opengl-rotacion.gif)
-
-## Zoom
-
-![grafica_traslacion](imagenes/opengl-escala.gif)
+![grafica_traslacion](imagenes/mov_teclas.gif)
 
 
 # 4. Programar otros modos de movimiento de cámara como son el MODO PAN o el MODO TRÍPODE
