@@ -207,5 +207,18 @@ void Camara::SetGLAspectRatioCamera() {
     SetDependentParametersCamera();
 }
 
+void Camara::PitchCamera(float angle )
+{
+    float vIn[3];
+    vIn[0]= camAtX - camViewX;
+    vIn[1]= camAtY - camViewY;
+    vIn[2]= camAtZ - camViewZ;
+    VectorRotXZ( vIn, angle, TRUE );
+    camAtX = camViewX + vIn[0];
+    camAtY = camViewY + vIn[1];
+    camAtZ = camViewZ + vIn[2];
+    SetDependentParametersCamera( );
+}
+
 Camara::~Camara() {
 }

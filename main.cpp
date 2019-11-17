@@ -114,7 +114,16 @@ void MouseMotion(int x, int y) {
     old_x = x;
 }
 
-
+void Tripode(int x, int y){
+    float rotacion_x, rotacion_y;
+    rotacion_x = (float)(old_x - x) * DEGREE_TO_RAD / 5;
+    rotacion_y = (float)(old_y - y) * DEGREE_TO_RAD / 5;
+    MiCamara->YawCamera(rotacion_x);
+    MiCamara->PitchCamera(rotacion_y);
+    old_y = y;
+    old_x = x;
+    glutPostRedisplay();
+}
 
 void Zoom(int x, int y) {
 
@@ -201,6 +210,11 @@ void mouse(int button, int state, int x, int y) {
                     if (state == GLUT_UP)
                         glutMotionFunc(NULL);
                     break;
+
+                case CAM_TRIPODE:
+                    if (state == GLUT_DOWN) glutMotionFunc(Tripode);
+                    if (state == GLUT_UP) glutMotionFunc(NULL);
+                    break;
             }
 
         case GLUT_RIGHT_BUTTON:
@@ -215,6 +229,8 @@ void mouse(int button, int state, int x, int y) {
 
     glutPostRedisplay();
 }
+
+
 
 void keyboard(unsigned char key, int x, int y) {
     if (command) {
@@ -322,6 +338,17 @@ static void SpecialKey(int key, int x, int y) {
             MiCamara->camViewZ = -3;
             MiCamara->SetDependentParametersCamera();
             printf("%s\n","F4, Reset, vista normal" );
+            break;
+
+        case GLUT_KEY_F5:
+            /*
+            if (current_mode != 0) break;
+            current_mode = 3;*/
+            MiCamara->camAtY = 0;
+            MiCamara->camViewY = 0;
+            MiCamara->camMovimiento = CAM_TRIPODE;
+            MiCamara->SetDependentParametersCamera();
+            printf("%s\n","F5, CAM TRIPODE" );
             break;
         default:
             printf("key %d %c X %d Y %d\n", key, key, x, y);

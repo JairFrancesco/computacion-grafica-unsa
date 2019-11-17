@@ -75,6 +75,7 @@ public:
 
     void Rotar_Latitud( float inc);
     void Rotar_Longitud(float inc);
+    void PitchCamera(float angle ); // local axis Z camera
 
 };
 
