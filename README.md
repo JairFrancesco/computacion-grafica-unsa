@@ -22,9 +22,7 @@ Luego ejecute con
 
 ## Movimiento usando el rastro del mouse
 
-| Código  | Ejecución |
-| ------------- | ------------- |
-| ![grafica_linea](imagenes/mov_movmouse_codigo.png) | ![grafica_linea](imagenes/mov_movmouse.gif) |
+![grafica_linea](imagenes/mov_movmouse.gif)
 
 ### Código
 
