@@ -31,6 +31,36 @@ Luego ejecute con
 ## Movimiento pulsando un click
 ![grafica_linea](imagenes/mov_clickmouse.gif)
 
+### Código
+
+```
+En la función SpecialKey:
+case GLUT_KEY_F3:
+    glutPassiveMotionFunc(MouseMotion);
+    MiCamara->camMovimiento = CAM_PASEAR;
+    printf("%s\n","F3,CAM PASEAR" );
+    break;
+
+En La función Mouse:
+case CAM_PASEAR:
+    if (state == GLUT_DOWN)
+        glutMotionFunc(Andar);
+    if (state == GLUT_UP)
+        glutMotionFunc(NULL);
+    break;
+
+void Andar(int x, int y) {
+    float rotacion_x, avance_y;
+    avance_y = (float) (y - old_y) / 10;
+    rotacion_x = (float) (old_x - x) * DEGREE_TO_RAD / 5;
+    MiCamara->YawCamera(rotacion_x);
+    MiCamara->AvanceFreeCamera(avance_y);
+    old_y = y;
+    old_x = x;
+    glutPostRedisplay();
+}
+```
+
 # 2. Dotar al programa de una tecla que permita cambiar el modo de proyección entre ORTOGONAL y PERSPECTIVA
 Para cambiar de modo de proyección usar la tecla F7, es un switch entre ambos modos
 
