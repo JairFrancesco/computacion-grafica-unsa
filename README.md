@@ -21,7 +21,16 @@ Luego ejecute con
 # 1. Mover la camara con el Mouse
 
 ## Movimiento usando el rastro del mouse
-![grafica_linea](imagenes/mov_movmouse.gif)
+
+| Código  | Ejecución |
+| ------------- | ------------- |
+|  ``` case GLUT_KEY_F2:
+            glutPassiveMotionFunc(Examinar);
+            MiCamara->camMovimiento = CAM_EXAMINAR;
+            printf("%s\n","F2, CAM_EXAMINAR" );
+            break; ``` | ![grafica_linea](imagenes/mov_movmouse.gif) |
+
+
 
 ## Movimiento pulsando un click
 ![grafica_linea](imagenes/mov_clickmouse.gif)
