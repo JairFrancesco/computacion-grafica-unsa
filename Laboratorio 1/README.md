@@ -7,17 +7,6 @@ Alumno:
 Profesor: 
 - Dr. Juan Carlos Gutierrez Caceres
 
-Para compilar el programa usar el .sh
-```
-sh compile.sh
-```
-
-Luego ejecute con
-
-```
-./lab2
-```
-
 # 1.Graficar Recta 2D usando punto medio
 
 ![grafica_linea](imagenes/grafica_linea.png)
