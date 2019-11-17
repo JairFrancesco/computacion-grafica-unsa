@@ -17,11 +17,11 @@ $ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
 
 # 1. Mover la camara con el Mouse
 
-## Movimiento pulsando un click
-![grafica_linea](imagenes/mov_clickmouse.gif)
-
 ## Movimiento usando el rastro del mouse
 ![grafica_linea](imagenes/mov_movmouse.gif)
+
+## Movimiento pulsando un click
+![grafica_linea](imagenes/mov_clickmouse.gif)
 
 # 2. Dotar al programa de una tecla que permita cambiar el modo de proyección entre ORTOGONAL y PERSPECTIVA
 
