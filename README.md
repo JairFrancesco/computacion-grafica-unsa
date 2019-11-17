@@ -7,12 +7,15 @@ Alumno:
 Profesor: 
 - Dr. Juan Carlos Gutierrez Caceres
 
-Requerimientos:
-- OpenGL
+Para compilar el programa usar el .sh
+```
+sh compile.sh
+```
+
+Luego ejecute con
 
 ```
-$ sudo apt-get update
-$ sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev
+./lab2
 ```
 
 # 1. Mover la camara con el Mouse
