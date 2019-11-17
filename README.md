@@ -52,6 +52,31 @@ case GLUT_KEY_F7:
 
 # 4. Programar otros modos de movimiento de cámara como son el MODO PAN o el MODO TRÍPODE
 
-![rellenado_poligonos](imagenes/grafica_rellenadopoligono.png)
 
+Modo TRIPODE:
+```
+void Tripode(int x, int y){
+    float rotacion_x, rotacion_y;
+    rotacion_x = (float)(old_x - x) * DEGREE_TO_RAD / 5;
+    rotacion_y = (float)(old_y - y) * DEGREE_TO_RAD / 5;
+    MiCamara->YawCamera(rotacion_x);
+    MiCamara->PitchCamera(rotacion_y);
+    old_y = y;
+    old_x = x;
+    glutPostRedisplay();
+}
+```
 
+Modo PAN
+```
+void Pan(int x, int y){
+    float avance_x, avance_y;
+    avance_x = (float)(old_x - x) / 10;
+    avance_y = (float)(y - old_y) / 10;
+    MiCamara->PanCamera(avance_x, avance_y);
+    old_y = y;
+    old_x = x;
+    glutPostRedisplay();
+}
+
+```
