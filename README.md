@@ -27,8 +27,23 @@ Luego ejecute con
 ![grafica_linea](imagenes/mov_clickmouse.gif)
 
 # 2. Dotar al programa de una tecla que permita cambiar el modo de proyección entre ORTOGONAL y PERSPECTIVA
+Para cambiar de modo de proyección usar la tecla F7, es un switch entre ambos modos
 
-![grafica_circunferencia](imagenes/grafica_circulo.png)
+
+```
+case GLUT_KEY_F7:
+    if(MiCamara->camProjection == CAM_CONIC){
+        MiCamara->x1=-3;
+        MiCamara->x2=3;
+        MiCamara->y1=-3;
+        MiCamara->y2=3;
+        MiCamara->z1=-5;
+        MiCamara->z2=5;
+        MiCamara->camProjection = CAM_PARALLEL;
+    } else MiCamara->camProjection = CAM_CONIC;
+    break;
+```
+![grafica_circunferencia](imagenes/cambio_perspectiva.gif)
 
 # 3. Mover el objeto en la proyeccion (con las teclas)
 

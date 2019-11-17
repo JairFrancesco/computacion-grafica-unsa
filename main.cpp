@@ -21,6 +21,21 @@ Laboratorio 2:
 -Programar otros modos de movimiento de cámara como son el MODO PAN o el MODO TRÍPODE
 */
 
+void DrawGrid(int HALF_GRID_SIZE)
+{
+    glBegin(GL_LINES);
+    glColor3f(0.75f, 0.75f, 0.75f);
+    for(int i=-HALF_GRID_SIZE;i<=HALF_GRID_SIZE;i++)
+    {
+        glVertex3f((float)i,0,(float)-HALF_GRID_SIZE);
+        glVertex3f((float)i,0,(float)HALF_GRID_SIZE);
+
+        glVertex3f((float)-HALF_GRID_SIZE,0,(float)i);
+        glVertex3f((float)HALF_GRID_SIZE,0,(float)i);
+    }
+    glEnd();
+}
+
 
 void display(void) {
     float At[3];
@@ -66,6 +81,8 @@ void display(void) {
       glVertex3f(-1.0f,-1.0f, 1.0f);
     
     glEnd();   // Done drawing the pyramid
+
+    DrawGrid(10);
 
     glPopMatrix();
     
@@ -292,6 +309,8 @@ void keyboard(unsigned char key, int x, int y) {
     glutPostRedisplay();
 }
 
+
+
 //Cambios de perspectiva de la camara (ortogonal a perspectiva)
 //Mover el objeto en la proyeccion (con las teclas)
 static void SpecialKey(int key, int x, int y) {
@@ -310,10 +329,22 @@ static void SpecialKey(int key, int x, int y) {
         case GLUT_KEY_F3:
             glutPassiveMotionFunc(MouseMotion);
             MiCamara->camMovimiento = CAM_PASEAR;
-            MiCamara->camAtY = 0;
-            MiCamara->camViewY = 0;
-            MiCamara->SetDependentParametersCamera();
-            printf("%s\n","F3, CAM_PASEAR: PERSPECTIVA" );
+            //MiCamara->camAtY = 0;
+            //MiCamara->camViewY = 0;
+            //MiCamara->SetDependentParametersCamera();
+            printf("%s\n","F3,CAM PASEAR" );
+            break;
+
+        case GLUT_KEY_F7:
+            if(MiCamara->camProjection == CAM_CONIC){
+                MiCamara->x1=-3;
+                MiCamara->x2=3;
+                MiCamara->y1=-3;
+                MiCamara->y2=3;
+                MiCamara->z1=-5;
+                MiCamara->z2=5;
+                MiCamara->camProjection = CAM_PARALLEL;
+            } else MiCamara->camProjection = CAM_CONIC;
             break;
         
         
