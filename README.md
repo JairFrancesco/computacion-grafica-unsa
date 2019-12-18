@@ -23,15 +23,15 @@ Luego ejecute con
 
 ## Tres puntos
 
-![grafica_linea](fase 3/imagenes/Curva1.gif)
+![grafica_linea](imagenes/Curva1.gif)
 
 
 ## Cinco puntos
-![grafica_linea](fase 3/imagenes/Curva1.gif)
+![grafica_linea](imagenes/Curva1.gif)
 
 # 2. Quad Tree
 ## Caricatura
-![bd_disponibles](fase 3/imagenes/quadtree1.png)
+![bd_disponibles](imagenes/quadtree1.png)
 
 ## Paisaje
-![bd_disponibles](fase 3/imagenes/quadtree2.png)
+![bd_disponibles](imagenes/quadtree2.png)
