@@ -23,11 +23,11 @@ Luego ejecute con
 
 ## Tres puntos
 
-![grafica_linea](imagenes/curva1.gif)
+![grafica_linea](imagenes/Curva1.gif)
 
 
 ## Cinco puntos
-![grafica_linea](imagenes/curva1.gif)
+![grafica_linea](imagenes/Curva1.gif)
 
 # 2. Quad Tree
 ![bd_disponibles](imagenes/quadtree1.png)
