@@ -25,10 +25,6 @@ Luego ejecute con
 
 ![grafica_linea](imagenes/Curva1.gif)
 
-
-## Cinco puntos
-![grafica_linea](imagenes/Curva1.gif)
-
 # 2. Quad Tree
 ## Caricatura
 ![bd_disponibles](imagenes/quadtree1.png)
