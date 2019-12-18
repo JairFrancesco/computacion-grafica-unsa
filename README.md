@@ -1,4 +1,4 @@
-# Segundo laboratorio de Computación Grafica - CS UNSA 2019
+# Tercer laboratorio de Computación Grafica - CS UNSA 2019
 
 Alumno:
 - Jair Francesco Huaman Canqui
@@ -23,14 +23,15 @@ Luego ejecute con
 
 ## Tres puntos
 
-![grafica_linea](fase 3/imagenes/curva1.gif)
+![grafica_linea](fase3/imagenes/Curva1.gif)
 
 
 ## Cinco puntos
-![grafica_linea](fase 3/imagenes/curva1.gif)
-
-### Código
+![grafica_linea](fase3/imagenes/Curva1.gif)
 
 # 2. Quad Tree
-![bd_disponibles](fase 3/imagenes/quadtree1.png)
-![bd_disponibles](fase 3/imagenes/quadtree2.png)
+## Caricatura
+![bd_disponibles](fase3/imagenes/quadtree1.png)
+
+## Paisaje
+![bd_disponibles](fase3/imagenes/quadtree2.png)
