@@ -20,12 +20,11 @@ Luego ejecute con
 ```
 
 # 1. Curva de Bézier
-
-![grafica_linea](imagenes/Curva1.gif)
+![grafica_linea](Curva1.gif)
 
 # 2. Quad Tree
 ## Caricatura
-![bd_disponibles](imagenes/quadtree1.png)
+![bd_disponibles](quadtree1.png)
 
 ## Paisaje
-![bd_disponibles](imagenes/quadtree2.png)
+![bd_disponibles](quadtree2.png)
