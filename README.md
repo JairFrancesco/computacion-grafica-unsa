@@ -21,12 +21,6 @@ Luego ejecute con
 
 # 1. Curva de Bézier
 
-## Tres puntos
-
-![grafica_linea](imagenes/Curva1.gif)
-
-
-## Cinco puntos
 ![grafica_linea](imagenes/Curva1.gif)
 
 # 2. Quad Tree
